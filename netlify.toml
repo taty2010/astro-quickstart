@@ -3,3 +3,9 @@
   command = "astro build"
   functions = "netlify/functions"
   publish = "dist"
+[[plugins]]
+  package = "netlify-plugin-github-dispatch"
+  [plugins.inputs]
+    owner = "taty2010" # use the target organization name
+    repo = "taty2010-tests" # use the target repo name
+    workflow = ".github/workflows/e2e.yml" # use workflow relative path
